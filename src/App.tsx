@@ -8,14 +8,14 @@ import { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 const photos = [
-  { id: '01', url: '/000751450009-positive.webp', title: 'Consciousness', category: '意识边界 | PERCEPTION' },
-  { id: '02', url: '/00094176_YiZheng_120_Portra400_11596-positive.webp', title: 'Still Life', category: '静物 | STILL LIFE' },
-  { id: '03', url: '/000052010012-positive.webp', title: 'Documentary', category: '纪实 | DOCUMENTARY' },
-  { id: '04', url: '/000051890003-positive.webp', title: 'Portrait', category: '人像 | PORTRAIT' },
-  { id: '05', url: '/000060970026-positive.webp', title: 'Moments', category: '趣事 | MOMENTS' },
-  { id: '06', url: '/000008810020-positive.webp', title: 'Street', category: '街头 | STREET' },
-  { id: '07', url: '/000047010008-positive.webp', title: 'Architecture', category: '建筑 | ARCHITECTURE' },
-  { id: '08', url: '/000052100011-positive.webp', title: 'Compartment', category: '区隔 | COMPARTMENT' },
+  { id: '01', url: '/000751450009-positive.jpg', title: 'Consciousness', category: '意识边界 | PERCEPTION' },
+  { id: '02', url: '/00094176_YiZheng_120_Portra400_11596-positive.jpg', title: 'Still Life', category: '静物 | STILL LIFE' },
+  { id: '03', url: '/000052010012-positive.jpg', title: 'Documentary', category: '纪实 | DOCUMENTARY' },
+  { id: '04', url: '/000051890003-positive.jpg', title: 'Portrait', category: '人像 | PORTRAIT' },
+  { id: '05', url: '/000060970026-positive.jpg', title: 'Moments', category: '趣事 | MOMENTS' },
+  { id: '06', url: '/000008810020-positive.jpg', title: 'Street', category: '街头 | STREET' },
+  { id: '07', url: '/000047010008-positive.jpg', title: 'Architecture', category: '建筑 | ARCHITECTURE' },
+  { id: '08', url: '/000052100011-positive.jpg', title: 'Compartment', category: '区隔 | COMPARTMENT' },
 ];
 
 function Hero() {
@@ -90,7 +90,7 @@ function HorizontalGallery() {
 
   // Map scroll progress to horizontal translation.
   // We have 8 items. Adjust the negative percentage to ensure the last item comes into view.
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
   // Parallax effect for images: move them slightly in the opposite direction of the scroll
   const imageX = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
@@ -105,7 +105,7 @@ function HorizontalGallery() {
           </h2>
         </div>
 
-        <motion.div style={{ x }} className="flex gap-12 md:gap-24 px-[10vw] md:px-[20vw] z-10">
+        <motion.div style={{ x }} className="flex gap-12 md:gap-24 pl-[10vw] pr-[60vw] md:pl-[20vw] md:pr-[50vw] z-10">
           {photos.map((photo) => (
             <div 
               key={photo.id} 
@@ -159,11 +159,18 @@ function Footer() {
           href="https://ig.me/m/qpskcn1" 
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative inline-block"
+          className="relative inline-block"
         >
-          <h2 className="text-[12vw] md:text-[10vw] font-display leading-[0.8] tracking-tighter uppercase text-white transition-colors duration-500 group-hover:text-transparent group-hover:stroke-text" style={{ WebkitTextStroke: '2px white' }}>
+          <motion.h2 
+            initial={{ color: "rgb(255, 255, 255)" }}
+            whileInView={{ color: "rgba(0, 0, 0, 0)" }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="text-[12vw] md:text-[10vw] font-display leading-[0.8] tracking-tighter uppercase" 
+            style={{ WebkitTextStroke: '2px white' }}
+          >
             Let's Talk
-          </h2>
+          </motion.h2>
           <ArrowUpRight className="absolute -top-4 -right-8 md:-top-8 md:-right-16 w-12 h-12 md:w-24 md:h-24 text-white opacity-0 -translate-x-8 translate-y-8 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500" />
         </a>
 

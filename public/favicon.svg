@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Canister Body -->
+  <rect x="25" y="20" width="40" height="60" rx="5" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="4"/>
+  <!-- Top and Bottom Hubs -->
+  <ellipse cx="45" cy="20" rx="20" ry="6" fill="#2A2A2A" stroke="#FFFFFF" stroke-width="4"/>
+  <ellipse cx="45" cy="80" rx="20" ry="6" fill="#2A2A2A" stroke="#FFFFFF" stroke-width="4"/>
+  <!-- Center Spool -->
+  <rect x="40" y="10" width="10" height="10" rx="2" fill="#FFFFFF"/>
+  <!-- Film Leader coming out -->
+  <path d="M65 35h15v30h-15" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Film Perforations on leader -->
+  <rect x="68" y="38" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="74" y="38" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="68" y="58" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="74" y="58" width="4" height="4" fill="#FFFFFF"/>
+</svg>
