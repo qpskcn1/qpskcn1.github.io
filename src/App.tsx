@@ -7,15 +7,24 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
+import photo01 from './assets/photos/000751450009-positive.webp';
+import photo02 from './assets/photos/00094176_YiZheng_120_Portra400_11596-positive.webp';
+import photo03 from './assets/photos/000052010012-positive.webp';
+import photo04 from './assets/photos/000051890003-positive.webp';
+import photo05 from './assets/photos/000060970026-positive.webp';
+import photo06 from './assets/photos/000008810020-positive.webp';
+import photo07 from './assets/photos/000047010008-positive.webp';
+import photo08 from './assets/photos/000052100011-positive.webp';
+
 const photos = [
-  { id: '01', url: '/000751450009-positive.jpg', title: 'Consciousness', category: '意识边界 | PERCEPTION' },
-  { id: '02', url: '/00094176_YiZheng_120_Portra400_11596-positive.jpg', title: 'Still Life', category: '静物 | STILL LIFE' },
-  { id: '03', url: '/000052010012-positive.jpg', title: 'Documentary', category: '纪实 | DOCUMENTARY' },
-  { id: '04', url: '/000051890003-positive.jpg', title: 'Portrait', category: '人像 | PORTRAIT' },
-  { id: '05', url: '/000060970026-positive.jpg', title: 'Moments', category: '趣事 | MOMENTS' },
-  { id: '06', url: '/000008810020-positive.jpg', title: 'Street', category: '街头 | STREET' },
-  { id: '07', url: '/000047010008-positive.jpg', title: 'Architecture', category: '建筑 | ARCHITECTURE' },
-  { id: '08', url: '/000052100011-positive.jpg', title: 'Compartment', category: '区隔 | COMPARTMENT' },
+  { id: '01', url: photo01, title: 'Consciousness', category: '意识边界 | PERCEPTION' },
+  { id: '02', url: photo02, title: 'Still Life', category: '静物 | STILL LIFE' },
+  { id: '03', url: photo03, title: 'Documentary', category: '纪实 | DOCUMENTARY' },
+  { id: '04', url: photo04, title: 'Portrait', category: '人像 | PORTRAIT' },
+  { id: '05', url: photo05, title: 'Moments', category: '趣事 | MOMENTS' },
+  { id: '06', url: photo06, title: 'Street', category: '街头 | STREET' },
+  { id: '07', url: photo07, title: 'Architecture', category: '建筑 | ARCHITECTURE' },
+  { id: '08', url: photo08, title: 'Compartment', category: '区隔 | COMPARTMENT' },
 ];
 
 function Hero() {
