@@ -7,14 +7,14 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
-import photo01 from './assets/photos/000751450009-positive.jpg';
-import photo02 from './assets/photos/00094176_YiZheng_120_Portra400_11596-positive.jpg';
-import photo03 from './assets/photos/000052010012-positive.jpg';
-import photo04 from './assets/photos/000051890003-positive.jpg';
-import photo05 from './assets/photos/000060970026-positive.jpg';
-import photo06 from './assets/photos/000008810020-positive.jpg';
-import photo07 from './assets/photos/000047010008-positive.jpg';
-import photo08 from './assets/photos/000052100011-positive.jpg';
+import photo01 from './assets/photos/000751450009-positive.webp';
+import photo02 from './assets/photos/00094176_YiZheng_120_Portra400_11596-positive.webp';
+import photo03 from './assets/photos/000052010012-positive.webp';
+import photo04 from './assets/photos/000051890003-positive.webp';
+import photo05 from './assets/photos/000060970026-positive.webp';
+import photo06 from './assets/photos/000008810020-positive.webp';
+import photo07 from './assets/photos/000047010008-positive.webp';
+import photo08 from './assets/photos/000052100011-positive.webp';
 
 const photos = [
   { id: '01', url: photo01, title: 'Consciousness', category: '意识边界 | PERCEPTION' },
