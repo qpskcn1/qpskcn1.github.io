@@ -128,7 +128,7 @@ function HorizontalGallery() {
                     initial={{ filter: "grayscale(100%)" }}
                     whileInView={{ filter: "grayscale(0%)" }}
                     whileHover={{ filter: "grayscale(0%)" }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" 
                     style={{ objectPosition: photo.id === '01' ? '30% center' : 'center' }}
