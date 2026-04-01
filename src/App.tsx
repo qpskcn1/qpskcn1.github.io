@@ -101,7 +101,7 @@ function HorizontalGallery() {
   // We have 8 items. Adjust the negative percentage to ensure the last item comes into view.
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
   // Parallax effect for images: move them slightly in the opposite direction of the scroll
-  const imageX = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const imageX = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
 
   return (
     <section ref={targetRef} className="relative h-[400vh] bg-[#050505]">
@@ -122,10 +122,15 @@ function HorizontalGallery() {
             >
               <div className="relative w-full h-full overflow-hidden bg-[#111] flex items-center justify-center">
                 <motion.div style={{ x: imageX }} className={`absolute w-[130%] h-full ${photo.id === '01' ? '-left-[5%]' : '-left-[15%]'}`}>
-                  <img 
+                  <motion.img 
                     src={photo.url} 
                     alt={photo.title} 
-                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0" 
+                    initial={{ filter: "grayscale(100%)" }}
+                    whileInView={{ filter: "grayscale(0%)" }}
+                    whileHover={{ filter: "grayscale(0%)" }}
+                    viewport={{ once: false, amount: 0.7 }}
+                    transition={{ duration: 0.8 }}
+                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" 
                     style={{ objectPosition: photo.id === '01' ? '30% center' : 'center' }}
                     referrerPolicy="no-referrer" 
                     loading="lazy"
