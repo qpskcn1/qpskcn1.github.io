@@ -125,7 +125,7 @@ function HorizontalGallery() {
                   <img 
                     src={photo.url} 
                     alt={photo.title} 
-                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" 
+                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0" 
                     style={{ objectPosition: photo.id === '01' ? '30% center' : 'center' }}
                     referrerPolicy="no-referrer" 
                     loading="lazy"
