@@ -4,7 +4,7 @@
  */
 
 import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 import photo01 from './assets/photos/000751450009-positive.webp';
@@ -92,6 +92,15 @@ function Hero() {
 }
 
 function HorizontalGallery() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -101,7 +110,7 @@ function HorizontalGallery() {
   // We have 8 items. Adjust the negative percentage to ensure the last item comes into view.
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
   // Parallax effect for images: move them slightly in the opposite direction of the scroll
-  const imageX = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
+  const imageX = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
     <section ref={targetRef} className="relative h-[400vh] bg-[#050505]">
@@ -121,13 +130,13 @@ function HorizontalGallery() {
               className="relative w-[80vw] md:w-[45vw] h-[60vh] md:h-[75vh] shrink-0 group cursor-crosshair"
             >
               <div className="relative w-full h-full overflow-hidden bg-[#111] flex items-center justify-center">
-                <motion.div style={{ x: imageX, left: "-25%", width: "150%" }} className="absolute h-full">
+                <motion.div style={{ x: imageX, left: "-50%", width: "200%" }} className="absolute h-full">
                   <motion.img 
                     src={photo.url} 
                     alt={photo.title} 
                     initial={{ filter: "grayscale(100%)" }}
-                    whileInView={{ filter: "grayscale(0%)" }}
-                    whileHover={{ filter: "grayscale(0%)" }}
+                    whileInView={isMobile ? { filter: "grayscale(0%)" } : {}}
+                    whileHover={!isMobile ? { filter: "grayscale(0%)" } : {}}
                     viewport={{ once: false, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" 
