@@ -8,14 +8,14 @@ import { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 const photos = [
-  { id: '01', url: '/000751450009-positive.webp', title: 'Consciousness', category: '意识边界 | PERCEPTION' },
-  { id: '02', url: '/00094176_YiZheng_120_Portra400_11596-positive.webp', title: 'Still Life', category: '静物 | STILL LIFE' },
-  { id: '03', url: '/000052010012-positive.webp', title: 'Documentary', category: '纪实 | DOCUMENTARY' },
-  { id: '04', url: '/000051890003-positive.webp', title: 'Portrait', category: '人像 | PORTRAIT' },
-  { id: '05', url: '/000060970026-positive.webp', title: 'Moments', category: '趣事 | MOMENTS' },
-  { id: '06', url: '/000008810020-positive.webp', title: 'Street', category: '街头 | STREET' },
-  { id: '07', url: '/000047010008-positive.webp', title: 'Architecture', category: '建筑 | ARCHITECTURE' },
-  { id: '08', url: '/000052100011-positive.webp', title: 'Compartment', category: '区隔 | COMPARTMENT' },
+  { id: '01', url: '/000751450009-positive.jpg', title: 'Consciousness', category: '意识边界 | PERCEPTION' },
+  { id: '02', url: '/00094176_YiZheng_120_Portra400_11596-positive.jpg', title: 'Still Life', category: '静物 | STILL LIFE' },
+  { id: '03', url: '/000052010012-positive.jpg', title: 'Documentary', category: '纪实 | DOCUMENTARY' },
+  { id: '04', url: '/000051890003-positive.jpg', title: 'Portrait', category: '人像 | PORTRAIT' },
+  { id: '05', url: '/000060970026-positive.jpg', title: 'Moments', category: '趣事 | MOMENTS' },
+  { id: '06', url: '/000008810020-positive.jpg', title: 'Street', category: '街头 | STREET' },
+  { id: '07', url: '/000047010008-positive.jpg', title: 'Architecture', category: '建筑 | ARCHITECTURE' },
+  { id: '08', url: '/000052100011-positive.jpg', title: 'Compartment', category: '区隔 | COMPARTMENT' },
 ];
 
 function Hero() {
