@@ -121,14 +121,14 @@ function HorizontalGallery() {
               className="relative w-[80vw] md:w-[45vw] h-[60vh] md:h-[75vh] shrink-0 group cursor-crosshair"
             >
               <div className="relative w-full h-full overflow-hidden bg-[#111] flex items-center justify-center">
-                <motion.div style={{ x: imageX }} className="absolute w-[150%] h-full -left-[25%]">
+                <motion.div style={{ x: imageX, left: "-25%", width: "150%" }} className="absolute h-full">
                   <motion.img 
                     src={photo.url} 
                     alt={photo.title} 
                     initial={{ filter: "grayscale(100%)" }}
                     whileInView={{ filter: "grayscale(0%)" }}
                     whileHover={{ filter: "grayscale(0%)" }}
-                    viewport={{ once: false, amount: 0.7 }}
+                    viewport={{ once: false, amount: 0.3 }}
                     transition={{ duration: 0.8 }}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" 
                     style={{ objectPosition: photo.id === '01' ? '30% center' : 'center' }}

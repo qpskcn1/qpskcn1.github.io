@@ -2,19 +2,28 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Justice Zheng — Photographic Portfolio
 
-This contains everything you need to run your app locally.
+A visual exhibit of curated visual art, built with high-performance modern web technologies. Focuses on cinematic horizontal film viewing with rich parallax and dynamic viewport focus.
 
-View your app in AI Studio: https://aistudio-preprod.corp.google.com/apps/909aedba-2174-42eb-8157-e57005f5ba94
+### 🛠️ Technology Stack
+-   **Vite + React** (Fast Static Page Generation)
+-   **Tailwind CSS** (Sleek layout styling and utility tokens)
+-   **Framer Motion** (Fluid micro-animations & viewport intersection tracking)
+-   **WebP Automation** (Automated high-compression asset down-scaling)
 
-## Run Locally
+### 🚀 Running Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js (v18+)
 
+1.  Install dependencies:
+    ```bash
+    npm install
+    ```
+2.  Run the local developer server:
+    ```bash
+    npm run dev
+    ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 📦 Deployment
+Automated via **GitHub Actions** (`.github/workflows/deploy.yml`) on branch push to `master`, uploading directly to GitHub Pages (`yizheng.io`).
