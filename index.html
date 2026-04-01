@@ -1,59 +1,13 @@
----
-layout: default
-title: Projects
-description: Projects Page
-featured_image: /images/home.png
----
-<!-- <section class="intro">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
 
-	<div class="wrap">
-
-		<h1>Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program</h1>
-		<p>Linus Torvalds</p>
-
-	</div>
-
-</section> -->
-
-<section class="portfolio">
-	<div class="portfolio-categories button-group filter-button-group">
-		<button class="button active" data-filter="*">All</button>
-		{% assign categories = "Coding,Video,Photography" | split: ',' %}
-		{% for category in categories %}
-			<button class="button" data-filter=".{{ category }}">{{ category }}</button>
-		{% endfor %}
-	</div>
-
-	<div class="content-wrap portfolio-wrap grid">
-
-		{% for project in site.projects reversed %}
-
-		<div class="portfolio-item {{project.category}}" data-tilt  data-tilt-max="0.5">
-
-			<a class="portfolio-item__link" href="{{ project.url | relative_url }}">
-
-				<div class="portfolio-item__image">
-					<img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
-				</div>
-
-				<div class="portfolio-item__content">
-					<div class="portfolio-item__info">
-						<p class="portfolio-item__categories">{{ project.categories }}</p>
-						<h2 class="portfolio-item__title">{{ project.title }}</h2>
-						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
-					</div>
-				</div>
-
-			</a>
-
-		</div>
-
-		{% endfor %}
-
-	</div>
-
-</section>
-
-<script type="text/javascript" src="/js/plugins/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="/js/projects.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
