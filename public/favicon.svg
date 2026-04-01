@@ -1,16 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <!-- Canister Body -->
-  <rect x="25" y="20" width="40" height="60" rx="5" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="4"/>
-  <!-- Top and Bottom Hubs -->
-  <ellipse cx="45" cy="20" rx="20" ry="6" fill="#2A2A2A" stroke="#FFFFFF" stroke-width="4"/>
-  <ellipse cx="45" cy="80" rx="20" ry="6" fill="#2A2A2A" stroke="#FFFFFF" stroke-width="4"/>
-  <!-- Center Spool -->
-  <rect x="40" y="10" width="10" height="10" rx="2" fill="#FFFFFF"/>
-  <!-- Film Leader coming out -->
-  <path d="M65 35h15v30h-15" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
-  <!-- Film Perforations on leader -->
-  <rect x="68" y="38" width="4" height="4" fill="#FFFFFF"/>
-  <rect x="74" y="38" width="4" height="4" fill="#FFFFFF"/>
-  <rect x="68" y="58" width="4" height="4" fill="#FFFFFF"/>
-  <rect x="74" y="58" width="4" height="4" fill="#FFFFFF"/>
+  <!-- Camera Body -->
+  <rect x="33" y="30" width="34" height="56" rx="4" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="3"/>
+  <!-- Viewfinder Hood (Opened) -->
+  <path d="M36 30 L42 16 L58 16 L64 30 Z" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Top Lens (Viewing) -->
+  <circle cx="50" cy="46" r="8" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="50" cy="46" r="3" fill="#FFFFFF"/>
+  <!-- Bottom Lens (Taking) -->
+  <circle cx="50" cy="70" r="10" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="50" cy="70" r="4" fill="#FFFFFF"/>
+  <!-- Nameplate -->
+  <rect x="42" y="34" width="16" height="3" fill="#FFFFFF"/>
+  <!-- Side Focus Knob -->
+  <rect x="27" y="52" width="6" height="14" rx="2" fill="#FFFFFF"/>
+  <!-- Shattles / Details -->
+  <circle cx="39" cy="80" r="2" fill="#FFFFFF"/>
+  <circle cx="61" cy="80" r="2" fill="#FFFFFF"/>
 </svg>
