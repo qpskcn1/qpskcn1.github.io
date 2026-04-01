@@ -130,7 +130,7 @@ function HorizontalGallery() {
               className="relative w-[80vw] md:w-[45vw] h-[60vh] md:h-[75vh] shrink-0 group cursor-crosshair"
             >
               <div className="relative w-full h-full overflow-hidden bg-[#111] flex items-center justify-center">
-                <motion.div style={{ x: imageX, left: "-50%", width: "200%" }} className="absolute h-full">
+                <motion.div style={{ x: imageX, left: "-15%", width: "130%" }} className="absolute h-full">
                   <motion.img 
                     src={photo.url} 
                     alt={photo.title} 
